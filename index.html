@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Lovers South Africa - Saving Lives Through Adoption</title>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #6c63ff;
+            --text: #333;
+            --light: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/400');
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mission {
+            background: var(--light);
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .cta {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Animal Lovers South Africa</h1>
+        <p>Saving Lives Through Adoption & Animal Welfare</p>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#adopt">Adopt</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>We are dedicated to promoting animal welfare, facilitating adoptions, and creating a compassionate community for all animals in South Africa.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <img src="/api/placeholder/80/80" alt="Adopt icon">
+                    <h3>Adopt</h3>
+                    <p>Give a loving home to an animal in need. Browse our available pets and find your perfect companion.</p>
+                    <a href="#adopt" class="cta">Find a Pet</a>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/80/80" alt="Volunteer icon">
+                    <h3>Volunteer</h3>
+                    <p>Join our community of volunteers and make a difference in animals' lives. Every helping hand counts!</p>
+                    <a href="#volunteer" class="cta">Join Us</a>
+                </div>
+                <div class="card">
+                    <img src="/api/placeholder/80/80" alt="Donate icon">
+                    <h3>Donate</h3>
+                    <p>Support our mission through donations. Your contribution helps us save more lives and improve animal welfare.</p>
+                    <a href="#donate" class="cta">Support Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Animal Lovers South Africa. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/AnimalLoversSA" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/animalloverssouthafrica" target="_blank">Instagram</a>
+                <a href="mailto:animalloverssouthafrica@yahoo.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
