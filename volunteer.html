@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Animal Lovers South Africa</title>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #6c63ff;
+            --text: #333;
+            --light: #f5f5f5;
+            --success: #4caf50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/400');
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .opportunity-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .opportunity-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .opportunity-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .opportunity-card ul {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+
+        .opportunity-card ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .opportunity-card ul li:before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .form-section {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #5753e0;
+        }
+
+        .benefits {
+            background: var(--secondary);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .form-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>Volunteer With Us</h1>
+        <p>Make a Difference in Animals' Lives</p>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Volunteer Opportunities</h2>
+            <div class="opportunities-grid">
+                <div class="opportunity-card">
+                    <h3>Animal Care</h3>
+                    <p>Help with daily care and socialization of our animals.</p>
+                    <ul>
+                        <li>Feeding and grooming</li>
+                        <li>Exercise and playtime</li>
+                        <li>Basic training</li>
+                        <li>Socialization</li>
+                    </ul>
+                </div>
+                <div class="opportunity-card">
+                    <h3>Events & Outreach</h3>
+                    <p>Support our community events and education programs.</p>
+                    <ul>
+                        <li>Adoption events</li>
+                        <li>Community education</li>
+                        <li>Fundraising activities</li>
+                        <li>Social media management</li>
+                    </ul>
+                </div>
+                <div class="opportunity-card">
+                    <h3>Transport & Logistics</h3>
+                    <p>Help with transportation and operational needs.</p>
+                    <ul>
+                        <li>Vet appointments</li>
+                        <li>Supply delivery</li>
+                        <li>Emergency transport</li>
+                        <li>Home checks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="benefits">
+                <h2>Benefits of Volunteering</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h3>Make an Impact</h3>
+                        <p>Direct contribution to animal welfare</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Learn Skills</h3>
+                        <p>Gain valuable experience in animal care</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Meet Others</h3>
+                        <p>Connect with fellow animal lovers</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Feel Good</h3>
+                        <p>Experience the joy of helping animals</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Volunteer Application Form</h2>
+                <form id="volunteer-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="area">Preferred Area</label>
+                            <select id="area" name="area" required>
+                                <option value="">Select an area</option>
+                                <option value="animal-care">Animal Care</option>
+                                <option value="events">Events & Outreach</option>
+                                <option value="transport">Transport & Logistics</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="availability">Availability</label>
+                        <textarea id="availability" name="availability" placeholder="Please specify your available days and times" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Relevant Experience</label>
+                        <textarea id="experience" name="experience" placeholder="Tell us about any relevant experience you have"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Animal Lovers South Africa. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/AnimalLoversSA" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/animalloverssouthafrica" target="_blank">Instagram</a>
+                <a href="mailto:animalloverssouthafrica@yahoo.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
