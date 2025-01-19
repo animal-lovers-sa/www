@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Animal Lovers South Africa</title>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #6c63ff;
+            --text: #333;
+            --light: #f5f5f5;
+            --success: #4caf50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/400');
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .contact-method {
+            margin-bottom: 2rem;
+        }
+
+        .contact-method h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-method p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links-contact {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links-contact a {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links-contact a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #5753e0;
+        }
+
+        .emergency {
+            background: #ff6b6b;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .emergency h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-section {
+            margin-top: 4rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .faq-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>Contact Us</h1>
+        <p>We're Here to Help</p>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="emergency">
+                <h3>Animal Emergency?</h3>
+                <p>Call our 24/7 Emergency Hotline: <strong>XXX-XXX-XXXX</strong></p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <h3>General Inquiries</h3>
+                        <p>Email: animalloverssouthafrica@yahoo.com</p>
+                        <p>Phone: XXX-XXX-XXXX</p>
+                        <p>Hours: Monday-Friday, 9:00 AM - 5:00 PM</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3>Location</h3>
+                        <p>Animal Lovers South Africa</p>
+                        <p>[Street Address]</p>
+                        <p>[City, Province]</p>
+                        <p>South Africa</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3>Social Media</h3>
+                        <div class="social-links-contact">
+                            <a href="https://www.facebook.com/AnimalLoversSA" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/animalloverssouthafrica" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="adoption">Adoption Inquiry</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="donation">Donation</option>
+                                <option value="emergency">Report Emergency</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How can I adopt a pet?</h3>
+                        <p>Visit our Adoption page to view available pets and follow our adoption process. You can also contact us directly for more information.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How can I volunteer?</h3>
+                        <p>Check our Volunteer page for opportunities and fill out the volunteer application form. We'll contact you to discuss how you can help.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What to do if I find a stray animal?</h3>
+                        <p>Contact our emergency hotline immediately. We'll guide you through the steps to ensure the animal's safety.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Animal Lovers South Africa. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/AnimalLoversSA" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/animalloverssouthafrica" target="_blank">Instagram</a>
+                <a href="mailto:animalloverssouthafrica@yahoo.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
