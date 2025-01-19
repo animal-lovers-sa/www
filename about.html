@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Animal Lovers South Africa</title>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #6c63ff;
+            --text: #333;
+            --light: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/400');
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .about-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-section {
+            background: var(--light);
+            padding: 4rem 1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>About Animal Lovers South Africa</h1>
+        <p>Making a Difference in Animal Welfare Since Our Foundation</p>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Our Story</h3>
+                    <p>Animal Lovers South Africa was founded by a group of passionate individuals committed to making a difference in animal welfare. What started as a small community initiative has grown into a nationwide movement, connecting animal lovers and advocating for those who cannot speak for themselves.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Our Vision</h3>
+                    <p>We envision a South Africa where every animal has a loving home, where animal welfare is a priority, and where communities come together to protect and care for all creatures. Through education, advocacy, and direct action, we work tirelessly towards this goal.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Our Impact</h3>
+                    <p>Through our network of volunteers, supporters, and partner organizations, we've helped thousands of animals find loving homes, provided emergency care, and educated communities about responsible pet ownership and animal welfare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <h2>Our Impact in Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h4>1000+</h4>
+                    <p>Animals Helped</p>
+                </div>
+                <div class="stat-item">
+                    <h4>500+</h4>
+                    <p>Successful Adoptions</p>
+                </div>
+                <div class="stat-item">
+                    <h4>200+</h4>
+                    <p>Active Volunteers</p>
+                </div>
+                <div class="stat-item">
+                    <h4>50+</h4>
+                    <p>Partner Organizations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p>Meet the dedicated individuals who make our mission possible.</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Team member">
+                    <h3>Volunteer Coordinator</h3>
+                    <p>Coordinates our network of dedicated volunteers</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Team member">
+                    <h3>Adoption Specialist</h3>
+                    <p>Manages our adoption program and placement services</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Team member">
+                    <h3>Community Outreach</h3>
+                    <p>Leads our educational and awareness initiatives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Animal Lovers South Africa. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/AnimalLoversSA" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/animalloverssouthafrica" target="_blank">Instagram</a>
+                <a href="mailto:animalloverssouthafrica@yahoo.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
