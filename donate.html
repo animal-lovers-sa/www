@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Animal Lovers South Africa</title>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #6c63ff;
+            --text: #333;
+            --light: #f5f5f5;
+            --success: #4caf50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/400');
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .impact-section {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .impact-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .impact-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .donation-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .amount-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .amount-btn {
+            background: var(--light);
+            border: none;
+            padding: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .amount-btn:hover,
+        .amount-btn.active {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .custom-amount {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .donate-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            background-color: #5753e0;
+        }
+
+        .other-ways {
+            margin-top: 4rem;
+        }
+
+        .ways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .way-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .way-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .banking-details {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .banking-details dl {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .banking-details dt {
+            font-weight: bold;
+        }
+
+        .footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>Support Our Cause</h1>
+        <p>Your Donation Makes a Difference</p>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="impact-section">
+                <h2>Your Impact</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <img src="/api/placeholder/80/80" alt="Food icon">
+                        <h3>R200</h3>
+                        <p>Provides food for one animal for a month</p>
+                    </div>
+                    <div class="impact-card">
+                        <img src="/api/placeholder/80/80" alt="Medical icon">
+                        <h3>R500</h3>
+                        <p>Covers basic medical care and vaccinations</p>
+                    </div>
+                    <div class="impact-card">
+                        <img src="/api/placeholder/80/80" alt="Shelter icon">
+                        <h3>R1000</h3>
+                        <p>Supports rescue and rehabilitation efforts</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donation-options">
+                <div class="donation-card">
+                    <h3>One-Time Donation</h3>
+                    <div class="amount-grid">
+                        <button class="amount-btn">R100</button>
+                        <button class="amount-btn">R200</button>
+                        <button class="amount-btn">R500</button>
+                        <button class="amount-btn">R1000</button>
+                        <button class="amount-btn">R2000</button>
+                        <button class="amount-btn">R5000</button>
+                    </div>
+                    <input type="number" class="custom-amount" placeholder="Custom Amount (R)">
+                    <button class="donate-btn">Donate Now</button>
+                </div>
+                <div class="donation-card">
+                    <h3>Monthly Donation</h3>
+                    <div class="amount-grid">
+                        <button class="amount-btn">R50</button>
+                        <button class="amount-btn">R100</button>
+                        <button class="amount-btn">R200</button>
+                        <button class="amount-btn">R500</button>
+                        <button class="amount-btn">R1000</button>
+                        <button class="amount-btn">R2000</button>
+                    </div>
+                    <input type="number" class="custom-amount" placeholder="Custom Amount (R)">
+                    <button class="donate-btn">Become Monthly Donor</button>
+                </div>
+            </div>
+
+            <div class="other-ways">
+                <h2>Other Ways to Help</h2>
+                <div class="ways-grid">
+                    <div class="way-card">
+                        <h3>Direct Bank Transfer</h3>
+                        <div class="banking-details">
+                            <dl>
+                                <dt>Bank:</dt>
+                                <dd>Standard Bank</dd>
+                                <dt>Account Name:</dt>
+                                <dd>Animal Lovers South Africa</dd>
+                                <dt>Account Number:</dt>
+                                <dd>XXXX XXXX XXXX</dd>
+                                <dt>Branch Code:</dt>
+                                <dd>XXXXX</dd>
+                                <dt>Reference:</dt>
+                                <dd>DONATE [Your Name]</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="way-card">
+                        <h3>In-Kind Donations</h3>
+                        <p>We always welcome:</p>
+                        <ul>
+                            <li>Pet food</li>
+                            <li>Blankets and bedding</li>
+                            <li>Toys and enrichment items</li>
+                            <li>Cleaning supplies</li>
+                            <li>Medical supplies</li>
+                        </ul>
+                    </div>
+                    <div class="way-card">
+                        <h3>Corporate Sponsorship</h3>
+                        <p>Partner with us to make a lasting impact:</p>
+                        <ul>
+                            <li>Event sponsorship</li>
+                            <li>Monthly giving programs</li>
+                            <li>Medical care sponsorship</li>
+                            <li>Infrastructure support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Animal Lovers South Africa. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/AnimalLoversSA" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/animalloverssouthafrica" target="_blank">Instagram</a>
+                <a href="mailto:animalloverssouthafrica@yahoo.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
